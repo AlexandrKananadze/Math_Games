@@ -47,7 +47,7 @@ public class Engine {
     }
     public static void wrongAnswerOutputString(String name, String userAnswer, String correctAnswer) {
         System.out.println(userAnswer + " is wrong  answer ;(. Correct answer was " + correctAnswer + "!");
-        System.out.println("Let's try again, " + name + " !");
+        System.out.println("Let's try again, " + name + "!");
 
     }
     public static void wrongAnswerOutputInt(String name, int userAnswer, int correctAnswer) {
