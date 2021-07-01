@@ -19,7 +19,6 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice:");
-        System.out.println();
         Scanner bar = new Scanner(System.in);
         int gameNumber = bar.nextInt();
         Engine.inputCheckMenu(gameNumber);

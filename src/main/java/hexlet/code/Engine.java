@@ -25,13 +25,11 @@ public class Engine {
        return gameNumber;
     }
 
-
-
-
-
     public static void getName() {
+        System.out.println();
+        System.out.println("Welcome to the Brain Games!");
         Scanner console = new Scanner(System.in);
-        System.out.println("May i have you name?");
+        System.out.print("May i have you name?");
         username = console.nextLine();
         System.out.println("Hello, " + username);
     }
