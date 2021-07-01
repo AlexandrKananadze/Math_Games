@@ -16,11 +16,11 @@ public class Even {
       return rightAnswer;
     }
 
-   public static void even() {
+    public static void even() {
        int rand;
        Engine.getName();
        Scanner con = new Scanner(System.in);
-       System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
+       System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
        for (int i = 0; i < Engine.TRY_ATTEMPT_NUMBER;) {
        rand = Engine.genRandom();

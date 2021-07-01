@@ -31,7 +31,7 @@ public class Engine {
         Scanner console = new Scanner(System.in);
         System.out.println("May I have your name?");
         username = console.nextLine();
-        System.out.println("Hello, " + username);
+        System.out.println("Hello, " + username + "!");
     }
 
      public static void winner(int i, String name) {
