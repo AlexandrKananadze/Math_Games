@@ -39,8 +39,8 @@ public class Calc {
            int x = Engine.genRandom();
            int y = Engine.genRandom();
            char operation = getRandomCharacter();
-            System.out.println("Question: " + x + "" + operation + "" + y);
-            System.out.println("Your answer:");
+            System.out.println("Question: " + x + " " + operation + " " + y);
+            System.out.println("Your answer: ");
             double res = con.nextInt();
 
             if (Math.abs(res - calculation(x, y, operation)) < Engine.DELTA_IN_COMPARING_DOUBLES) {
