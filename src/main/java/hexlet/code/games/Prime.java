@@ -5,20 +5,12 @@ import java.util.Scanner;
 
 public class Prime {
 
-    private static int var = 1;
-
     private static String check(int n) {
-        String rightanswer = "";
-        if (n > 1) {
-            if (n % var != 0) {
-                var++;
-                check(n);
-            }
-            if (n == var) {
-                rightanswer = "yes";
-            }
-            if (n % var == 0 && n != var) {
+        String rightanswer = "yes";
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
                 rightanswer = "no";
+                break;
             }
         }
         return rightanswer;
