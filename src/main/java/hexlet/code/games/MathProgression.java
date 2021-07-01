@@ -33,7 +33,7 @@ public class MathProgression {
             System.out.print("Question: ");
             for (int k : progression) {
                 if (k == 00) {
-                    System.out.print("* ");
+                    System.out.print(".. ");
                 } else {
                     System.out.print(k + " ");
                 }
