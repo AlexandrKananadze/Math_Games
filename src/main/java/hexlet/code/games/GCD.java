@@ -18,7 +18,7 @@ public class GCD {
         for (int i = 0; i < Engine.TRY_ATTEMPT_NUMBER;) {
             int rand = Engine.genRandom();
             int rand1 = Engine.genRandom();
-            System.out.println("Question:" + rand + " " + rand1);
+            System.out.println("Question: " + rand + " " + rand1);
             System.out.println("You answer: ");
             int answer = con.nextInt();
             if (answer == gcd1(rand, rand1)) {

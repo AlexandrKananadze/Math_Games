@@ -24,8 +24,8 @@ public class Even {
 
        for (int i = 0; i < Engine.TRY_ATTEMPT_NUMBER;) {
        rand = Engine.genRandom();
-       System.out.println("Question:" + rand);
-       String answer = con.nextLine();
+       System.out.println("Question: " + rand);
+           String answer = con.nextLine();
 
            if (answer.equalsIgnoreCase(chetNechet(rand))) {
              Engine.correctAnswerOutPut();

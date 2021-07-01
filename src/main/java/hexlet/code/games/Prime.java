@@ -30,7 +30,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (int i = 0; i < Engine.TRY_ATTEMPT_NUMBER;) {
             int rand = Engine.genRandom();
-            System.out.println("Question:" + rand);
+            System.out.println("Question: " + rand);
             String answer = con.nextLine();
             String rightanswer = check(rand);
 

@@ -30,7 +30,7 @@ public class MathProgression {
         }
         hideMathProgression(progression);
 
-            System.out.print("Question:");
+            System.out.print("Question: ");
             for (int k : progression) {
                 if (k == 00) {
                     System.out.print("* ");
