@@ -29,7 +29,7 @@ public class Engine {
         System.out.println();
         System.out.println("Welcome to the Brain Games!");
         Scanner console = new Scanner(System.in);
-        System.out.println("May i have you name?");
+        System.out.println("May i have your name?");
         username = console.nextLine();
         System.out.println("Hello, " + username);
     }
