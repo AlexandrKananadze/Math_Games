@@ -20,7 +20,7 @@ public class Even {
        int rand;
        Engine.getName();
        Scanner con = new Scanner(System.in);
-       System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+       System.out.println("Answer 'yes' if given number is even. Otherwise answer 'no'.");
 
        for (int i = 0; i < Engine.TRY_ATTEMPT_NUMBER;) {
        rand = Engine.genRandom();
