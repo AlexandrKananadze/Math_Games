@@ -1,10 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.MathProgression;
-import hexlet.code.games.Prime;
+import hexlet.code.games.*;
 import java.util.Scanner;
 
 public class App {
@@ -21,28 +17,36 @@ public class App {
         System.out.print("Your choice:");
         Scanner bar = new Scanner(System.in);
         int gameNumber = bar.nextInt();
-        Engine.inputCheckMenu(gameNumber);
+            switch (gameNumber) {
+                case Engine2.GREETING:
+                    Cli.cli();
+                break;
 
-        if (gameNumber == Engine.GREETING) {
-            Cli.clis();
-        }
-        if (gameNumber == Engine.EVEN) {
-            Even.even();
-        }
-        if (gameNumber == Engine.CALC) {
-            Calc.calc();
-        }
-        if (gameNumber == Engine.GCD) {
-            GCD.gcd();
-        }
-        if (gameNumber == Engine.MATHPROGRESSION) {
-            MathProgression.mathProg();
-        }
-        if (gameNumber == Engine.PRIME) {
-            Prime.prime();
-        }
-        if (gameNumber == Engine.EXIT) {
-            System.out.println("Exit");
+               case Engine2.EVEN:
+                   Even1.runnerEven();
+               break;
+
+                case Engine2.CALC:
+                    Calc1.runnerCalc();
+                break;
+                case Engine2.GCD:
+                    GCD1.runnerGCD();
+                break;
+
+                case Engine2.MATHPROGRESSION:
+                    MathProgression1.runnerMathProgression();
+                break;
+
+                case Engine2.PRIME:
+                    Prime1.runnerPrime();
+                break;
+
+                case Engine2.EXIT:
+                    System.out.println("Exit");
+                break;
+
+                default:
+                break;
         }
     }
 }

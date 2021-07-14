@@ -1,0 +1,44 @@
+package hexlet.code.games;
+
+import hexlet.code.Engine2;
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class GCD1 {
+private static int a;
+private static int b;
+
+    public static int gcd1(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
+        return gcd1(b, a % b);
+    }
+
+    public static String generetionTask() {
+         a = Engine2.genRandom();
+         b = Engine2.genRandom();
+        return  "Find the greatest common divisor of given numbers" + '\n' + "Question: " + a + " "  + b + "?";
+    }
+
+    public static String rightAnswerCount() {
+        if (b == 0) {
+        return a + "";
+    }
+        return (gcd1(b, a % b)) + "";
+    }
+
+
+    public static Map<String, String> threeTaskGenerationGCD() {
+        Map<String, String> threeTask = new HashMap<>();
+        for (int i = 0; i < Engine2.TRY_ATTEMPT_NUMBER; i++) {
+            threeTask.put(generetionTask(), (rightAnswerCount()));
+        }
+        return threeTask;
+    }
+
+    public static void runnerGCD() {
+        Engine2.executeEngineInThisGame(threeTaskGenerationGCD());
+    }
+}
