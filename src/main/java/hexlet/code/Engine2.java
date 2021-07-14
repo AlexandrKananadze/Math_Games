@@ -67,7 +67,8 @@ public class Engine2 {
         System.out.println(task);
         for (Map.Entry<String, String> asd : threeQuestion.entrySet()) {
             outPutTaskToUser(asd.getKey());
-            boolean a = checkUserAnswerMatchCorrectAnswer(inputAnswerFromUserInt(), asd.getValue());
+            inputAnswerFromUserInt();
+            boolean a = checkUserAnswerMatchCorrectAnswer(userAnswer, asd.getValue());
             if (a) {
                 rightUserAnswerOutput();
                 i++;
