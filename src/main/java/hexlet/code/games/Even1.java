@@ -8,7 +8,7 @@ public class Even1 {
 
 
     private static int rand;
-    public static final String task = "Answer 'yes' if given number is even. Otherwise answer 'no'.";
+    public static final String TASK = "Answer 'yes' if given number is even. Otherwise answer 'no'.";
 
     //  Генерирует задание
     //  Вычисляет правильный ответ
@@ -36,7 +36,7 @@ public class Even1 {
     }
 
      public static void runnerEven() {
-           Engine2.executeEngineInThisGame(task,threeTaskGenerationEven());
+           Engine2.executeEngineInThisGame(TASK, threeTaskGenerationEven());
     }
 }
 

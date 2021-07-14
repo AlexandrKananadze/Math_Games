@@ -8,7 +8,7 @@ import java.util.Map;
 public class MathProgression1 {
 
     private static int valHide = 0;
-    public static final String task = "What number is missing in the PROGRESSION?";
+    public static final String TASK = "What number is missing in the PROGRESSION?";
     private static final int[] PROGRESSION = new int[(int) ((Math.random() * Engine2.PROGRESSION_SIZE)
                                                             + Engine2.PROGRESSION_MIN_SIZE)];
 
@@ -54,6 +54,6 @@ public class MathProgression1 {
     }
 
     public static void runnerMathProgression() {
-        Engine2.executeEngineInThisGame(task, threeTaskGenerationEven());
+        Engine2.executeEngineInThisGame(TASK, threeTaskGenerationEven());
     }
 }

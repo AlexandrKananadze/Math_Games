@@ -8,7 +8,7 @@ import java.util.Map;
 public class GCD1 {
 private static int a;
 private static int b;
-public static final String task = "Find the greatest common divisor of given numbers";
+public static final String TASK = "Find the greatest common divisor of given numbers";
 
     public static int gcd1(int a, int b) {
         if (b == 0) {
@@ -40,6 +40,6 @@ public static final String task = "Find the greatest common divisor of given num
     }
 
     public static void runnerGCD() {
-        Engine2.executeEngineInThisGame(task, threeTaskGenerationGCD());
+        Engine2.executeEngineInThisGame(TASK, threeTaskGenerationGCD());
     }
 }
