@@ -49,7 +49,6 @@ public class Calc1 {
 
   public static Map<String, String> threeTaskGenerationCalc() {
         Map<String, String> threeTask = new HashMap<>();
-        threeTask.put("What is the result of the expression?", "comingfirst");
         for (int i = 0; i < Engine2.TRY_ATTEMPT_NUMBER; i++) {
             threeTask.put(generetionTask(), rightAnswerCount());
         }
