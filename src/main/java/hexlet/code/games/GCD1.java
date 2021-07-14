@@ -30,7 +30,6 @@ public static final String TASK = "Find the greatest common divisor of given num
         return (gcd1(b, a % b)) + "";
     }
 
-
     public static Map<String, String> threeTaskGenerationGCD() {
         Map<String, String> threeTask = new HashMap<>();
         for (int i = 0; i < Engine2.TRY_ATTEMPT_NUMBER; i++) {

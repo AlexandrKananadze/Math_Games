@@ -40,7 +40,8 @@ public class Engine2 {
 
    public static String inputAnswerFromUserInt() {
        Scanner console = new Scanner(System.in);
-      return   console.nextLine() + "";
+        userAnswer = console.nextLine() + "";
+       return userAnswer;
    }
 
    public static boolean checkUserAnswerMatchCorrectAnswer(String rightUserAnswer, String rightAnswer) {
