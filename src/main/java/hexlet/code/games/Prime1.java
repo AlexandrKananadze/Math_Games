@@ -8,10 +8,11 @@ import java.util.Map;
 public class Prime1 {
 
     private static  int rand = 0;
+    public static final String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static String generetionTask() {
         rand = Engine2.genRandom();
-        return  "Answer 'yes' if given number is prime. Otherwise answer 'no'." + '\n' + "Question: " + rand + "?";
+        return  "Question: " + rand + "?";
     }
 
     public static String rightAnswerCount() {
@@ -34,7 +35,7 @@ public class Prime1 {
     }
 
     public static void runnerPrime() {
-        Engine2.executeEngineInThisGame(threeTaskGenerationEven());
+        Engine2.executeEngineInThisGame(task, threeTaskGenerationEven());
     }
 }
 

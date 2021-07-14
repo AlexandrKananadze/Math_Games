@@ -8,6 +8,7 @@ import java.util.Map;
 public class GCD1 {
 private static int a;
 private static int b;
+public static final String task = "Find the greatest common divisor of given numbers";
 
     public static int gcd1(int a, int b) {
         if (b == 0) {
@@ -19,7 +20,7 @@ private static int b;
     public static String generetionTask() {
          a = Engine2.genRandom();
          b = Engine2.genRandom();
-        return  "Find the greatest common divisor of given numbers" + '\n' + "Question: " + a + " "  + b + "?";
+        return  "Question: " + a + " "  + b + "?";
     }
 
     public static String rightAnswerCount() {
@@ -39,6 +40,6 @@ private static int b;
     }
 
     public static void runnerGCD() {
-        Engine2.executeEngineInThisGame(threeTaskGenerationGCD());
+        Engine2.executeEngineInThisGame(task, threeTaskGenerationGCD());
     }
 }

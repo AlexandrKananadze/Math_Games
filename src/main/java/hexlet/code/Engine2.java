@@ -60,9 +60,10 @@ public class Engine2 {
        System.out.println("Congratulations, " + userName + "!");
    }
 
-    public static void  executeEngineInThisGame(Map<String, String> threeQuestion) {
+    public static void  executeEngineInThisGame(String task, Map<String, String> threeQuestion) {
             inputUserNameGreeting();
         int i = 0;
+        System.out.println(task);
         for (Map.Entry<String, String> asd: threeQuestion.entrySet()) {
             outPutTaskToUser(asd.getKey());
             boolean a = checkUserAnswerMatchCorrectAnswer(inputAnswerFromUserInt(), asd.getValue());

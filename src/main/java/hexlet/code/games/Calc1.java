@@ -10,6 +10,7 @@ public class Calc1 {
     private static int x;
     private static int y;
     private static char operation;
+    public static final String task = "What is the result of the expression?";
 
   public static double calculation() {
       double result = 0;
@@ -39,7 +40,7 @@ public class Calc1 {
              x = Engine2.genRandom();
              y = Engine2.genRandom();
             operation = getRandomCharacter();
-      return  "What is the result of the expression? " + x + " " + operation + " " + y;
+      return  "Question: "  + x + " " + operation + " " + y  ;
   }
 
   public static String rightAnswerCount() {
@@ -48,6 +49,7 @@ public class Calc1 {
 
   public static Map<String, String> threeTaskGenerationCalc() {
         Map<String, String> threeTask = new HashMap<>();
+        threeTask.put("What is the result of the expression?", "comingfirst");
         for (int i = 0; i < Engine2.TRY_ATTEMPT_NUMBER; i++) {
             threeTask.put(generetionTask(), rightAnswerCount());
         }
@@ -55,6 +57,6 @@ public class Calc1 {
   }
 
   public static void runnerCalc() {
-     Engine2.executeEngineInThisGame(threeTaskGenerationCalc());
+      Engine2.executeEngineInThisGame(task, threeTaskGenerationCalc());
   }
 }
