@@ -72,6 +72,7 @@ public class Engine2 {
                 i++;
                 if (i == TRY_ATTEMPT_NUMBER) {
                     gameWinner();
+                    break;
                 }
             } else {
                 wrongUserAnswerOutput(asd.getValue());
