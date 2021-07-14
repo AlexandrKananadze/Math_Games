@@ -10,11 +10,11 @@ private static int a;
 private static int b;
 public static final String TASK = "Find the greatest common divisor of given numbers";
 
-    public static int gcd1(int a, int b) {
-        if (b == 0) {
-            return a;
+    public static int gcd1(int first, int second) {
+        if (second == 0) {
+            return first;
         }
-        return gcd1(b, a % b);
+        return gcd1(second, first % second);
     }
 
     public static String generetionTask() {

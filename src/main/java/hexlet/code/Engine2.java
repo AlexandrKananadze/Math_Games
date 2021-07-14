@@ -61,10 +61,10 @@ public class Engine2 {
    }
 
     public static void  executeEngineInThisGame(String task, Map<String, String> threeQuestion) {
-            inputUserNameGreeting();
+        inputUserNameGreeting();
         int i = 0;
         System.out.println(task);
-        for (Map.Entry<String, String> asd: threeQuestion.entrySet()) {
+        for (Map.Entry<String, String> asd : threeQuestion.entrySet()) {
             outPutTaskToUser(asd.getKey());
             boolean a = checkUserAnswerMatchCorrectAnswer(inputAnswerFromUserInt(), asd.getValue());
             if (a) {
@@ -81,23 +81,12 @@ public class Engine2 {
         }
     }
 
-    public static int inputCheckMenu(int answerInt) {
-        int gameNumber;
-        if (!(answerInt >= EXIT && answerInt <= PRIME)) {
-            gameNumber = answerInt;
-        } else {
-            gameNumber = 0;
-        }
-        return gameNumber;
-    }
-
-
     public static String getUserName() {
         return userName;
     }
 
-    public static void setUserName(String userName) {
-        Engine2.userName = userName;
+    public static void setUserName(String name) {
+        Engine2.userName = name;
     }
 }
 
