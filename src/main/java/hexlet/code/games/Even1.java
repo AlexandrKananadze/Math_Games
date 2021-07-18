@@ -6,37 +6,32 @@ import java.util.Map;
 
 public class Even1 {
 
-
+    private static final Map<String, String> GENERATED_TASKS = new HashMap<>();
     private static int rand;
-    public static final String TASK = "Answer 'yes' if given number is even. Otherwise answer 'no'.";
-
-    //  Генерирует задание
-    //  Вычисляет правильный ответ
-    //  Вызывает общую логику, передавая ей задание и правильный ответ
-
+    private static final String TASK = "Answer 'yes' if given number is even. Otherwise answer 'no'.";
 
     public static String generetionTask() {
         rand = Engine2.genRandom();
-        return  "Question: " + rand + "?";
+        return "Question: " + rand + "?";
     }
 
-    public static String rightAnswerCount() {
-        if (rand % 2 != 0) {
-            return "no";
+    public static boolean isEven() {
+        return rand % 2 == 0;
+    }
+
+    public static Map<String, String> questionsToAnswersEven() {
+        for (int i = 0; i < Engine2.NUMBER_OF_ATTEMPS; i++) {
+            if (isEven()) {
+                GENERATED_TASKS.put(generetionTask(), "yes");
+            } else {
+                GENERATED_TASKS.put(generetionTask(), "no");
+            }
         }
-        return "yes";
+        return GENERATED_TASKS;
     }
 
-    public static Map<String, String> threeTaskGenerationEven() {
-        Map<String, String> threeTask = new HashMap<>();
-        for (int i = 0; i < Engine2.TRY_ATTEMPT_NUMBER; i++) {
-            threeTask.put(generetionTask(), (rightAnswerCount()));
-        }
-    return threeTask;
-    }
-
-     public static void runnerEven() {
-           Engine2.executeEngineInThisGame(TASK, threeTaskGenerationEven());
+    public static void runnerEven() {
+        Engine2.execute(TASK, questionsToAnswersEven());
     }
 }
 

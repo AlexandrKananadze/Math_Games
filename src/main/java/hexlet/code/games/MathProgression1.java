@@ -6,54 +6,56 @@ import java.util.Map;
 
 
 public class MathProgression1 {
-
-    private static int valHide = 0;
+    private static final int PROGRESSION_SIZE = 10;
+    private static final int PROGRESSION_MIN_SIZE = 5;
+    private static String valHide = "";
     public static final String TASK = "What number is missing in the PROGRESSION?";
-    private static final int[] PROGRESSION = new int[(int) ((Math.random() * Engine2.PROGRESSION_SIZE)
-                                                            + Engine2.PROGRESSION_MIN_SIZE)];
+    private static final Map<String, String> GENERATED_TASKS = new HashMap<>();
 
-    public static int[] hideMathProgression(int[] progression) {
+    public static String[] hideMathProgression(String[] progression) {
         int indexHide = (int) (Math.random() * progression.length - 1);
         valHide = progression[indexHide];
-        progression[indexHide] = 00;
+        progression[indexHide] = "*";
         return progression;
     }
-    public static int[]  generateProgression() {
-         int d = Engine2.genRandom();
-         PROGRESSION[0] = Engine2.genRandom();
-         for (int k = 1; k < PROGRESSION.length; k++) {
-             PROGRESSION[k] = PROGRESSION[k - 1] + d;
-         }
-         hideMathProgression(PROGRESSION);
-         return PROGRESSION;
+
+    public static String[] generateProgression() {
+        String[] progression = new String[(int) ((Math.random() * PROGRESSION_SIZE)
+                + PROGRESSION_MIN_SIZE)];
+        int d = Engine2.genRandom();
+        int firstNumber = Engine2.genRandom();
+        for (int k = 0; k < progression.length; k++) {
+            progression[k] = String.valueOf(firstNumber + k * d);
+        }
+        hideMathProgression(progression);
+        return progression;
     }
 
-    public static String generetionTask() {
+    public static String generationsTask() {
         generateProgression();
         StringBuilder task = new StringBuilder();
-        for (int k : PROGRESSION) {
-            if (k == 00) {
+        for (String k : generateProgression()) {
+            if (k.equals("*")) {
                 task.append(".. ");
             } else {
                 task.append(k).append(" ");
             }
         }
-        return  "Question: " + task + "?";
+        return "Question: " + task + "?";
     }
 
     public static String rightAnswerCount() {
-        return valHide + "";
+        return String.valueOf(valHide);
     }
 
-    public static Map<String, String> threeTaskGenerationEven() {
-        Map<String, String> threeTask = new HashMap<>();
-        for (int i = 0; i < Engine2.TRY_ATTEMPT_NUMBER; i++) {
-            threeTask.put(generetionTask(), (rightAnswerCount()));
+    public static Map<String, String> questionsToAnswersMath() {
+        for (int i = 0; i < Engine2.NUMBER_OF_ATTEMPS; i++) {
+            GENERATED_TASKS.put(generationsTask(), (rightAnswerCount()));
         }
-        return threeTask;
+        return GENERATED_TASKS;
     }
 
     public static void runnerMathProgression() {
-        Engine2.executeEngineInThisGame(TASK, threeTaskGenerationEven());
+        Engine2.execute(TASK, questionsToAnswersMath());
     }
 }

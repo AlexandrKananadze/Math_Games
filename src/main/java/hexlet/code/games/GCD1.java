@@ -6,10 +6,10 @@ import java.util.Map;
 
 
 public class GCD1 {
-private static int a;
-private static int b;
-public static final String TASK = "Find the greatest common divisor of given numbers";
-
+    private static int a;
+    private static int b;
+    private static final String TASK = "Find the greatest common divisor of given numbers";
+    private static final Map<String, String> GENERATED_TASKS = new HashMap<>();
     public static int gcd1(int first, int second) {
         if (second == 0) {
             return first;
@@ -18,27 +18,26 @@ public static final String TASK = "Find the greatest common divisor of given num
     }
 
     public static String generetionTask() {
-         a = Engine2.genRandom();
-         b = Engine2.genRandom();
-        return  "Question: " + a + " "  + b + "?";
+        a = Engine2.genRandom();
+        b = Engine2.genRandom();
+        return "Question: " + a + " " + b + "?";
     }
 
     public static String rightAnswerCount() {
         if (b == 0) {
-        return a + "";
-    }
-        return (gcd1(b, a % b)) + "";
+            return String.valueOf(a);
+        }
+        return String.valueOf(gcd1(b, a % b));
     }
 
-    public static Map<String, String> threeTaskGenerationGCD() {
-        Map<String, String> threeTask = new HashMap<>();
-        for (int i = 0; i < Engine2.TRY_ATTEMPT_NUMBER; i++) {
-            threeTask.put(generetionTask(), (rightAnswerCount()));
+    public static Map<String, String> questionsToAnswersGCD() {
+        for (int i = 0; i < Engine2.NUMBER_OF_ATTEMPS; i++) {
+            GENERATED_TASKS.put(generetionTask(), (rightAnswerCount()));
         }
-        return threeTask;
+        return GENERATED_TASKS;
     }
 
     public static void runnerGCD() {
-        Engine2.executeEngineInThisGame(TASK, threeTaskGenerationGCD());
+        Engine2.execute(TASK, questionsToAnswersGCD());
     }
 }
