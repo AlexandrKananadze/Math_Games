@@ -21,10 +21,11 @@ public class Even1 {
 
     public static Map<String, String> questionsToAnswersEven() {
         for (int i = 0; i < Engine2.NUMBER_OF_ATTEMPS; i++) {
+            String task = generetionTask();
             if (isEven()) {
-                GENERATED_TASKS.put(generetionTask(), "yes");
+                GENERATED_TASKS.put(task, "yes");
             } else {
-                GENERATED_TASKS.put(generetionTask(), "no");
+                GENERATED_TASKS.put(task, "no");
             }
         }
         return GENERATED_TASKS;

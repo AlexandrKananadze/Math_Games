@@ -53,7 +53,7 @@ public class Engine2 {
                 System.out.println("Correct!");
             } else {
                 wrongUserAnswerOutput(questionToAnswer.getValue(), userAnswer);
-                break;
+               return;
             }
         }
         System.out.println("Congratulations, " + userName + "!");

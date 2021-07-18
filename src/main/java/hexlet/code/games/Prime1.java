@@ -28,10 +28,11 @@ public class Prime1 {
 
     public static Map<String, String> questionsToAnswersPrime() {
         for (int i = 0; i < Engine2.NUMBER_OF_ATTEMPS; i++) {
+            String task = generationsTask();
             if (isPrime()) {
-                GENERATED_TASKS.put(generationsTask(), "yes");
+                GENERATED_TASKS.put(task, "yes");
             } else {
-                GENERATED_TASKS.put(generationsTask(), "no");
+                GENERATED_TASKS.put(task, "no");
             }
         }
         return GENERATED_TASKS;
