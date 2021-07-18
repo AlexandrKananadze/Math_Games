@@ -10,6 +10,7 @@ public class Prime1 {
     private static int rand = 0;
     public static final String TASK = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final Map<String, String> GENERATED_TASKS = new HashMap<>();
+
     public static String generationsTask() {
         rand = Engine2.genRandom();
         return "Question: " + rand + "?";

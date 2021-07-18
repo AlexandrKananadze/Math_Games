@@ -43,10 +43,10 @@ public class Engine2 {
         System.out.println("Let's try again, " + userName + "!");
     }
 
-    public static void execute(String task, Map<String, String> threeQuestion) {
+    public static void execute(String task, Map<String, String> question) {
         greeting();
         System.out.println(task);
-        for (Map.Entry<String, String> questionToAnswer : threeQuestion.entrySet()) {
+        for (Map.Entry<String, String> questionToAnswer : question.entrySet()) {
             outPutTaskToUser(questionToAnswer.getKey());
             String userAnswer = inputAnswerFromUserInt();
             if (isCorrect(userAnswer, questionToAnswer.getValue())) {
