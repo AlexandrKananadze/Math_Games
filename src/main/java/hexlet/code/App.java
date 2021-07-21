@@ -1,15 +1,18 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc1;
-import hexlet.code.games.Even1;
-import hexlet.code.games.GCD1;
-import hexlet.code.games.MathProgression1;
-import hexlet.code.games.Prime1;
+import hexlet.code.games.*;
+
 import java.util.Scanner;
 
 public class App {
     private static final int GREETING = 1;
     private static final int EXIT = 0;
+    public static final int EVEN = 2;
+    public static final int CALC = 3;
+    public static final int GCD = 4;
+    public static final int MATH_PROGRESSION = 5;
+    public static final int PRIME = 6;
+
 
     public static void main(String[] args) {
 
@@ -30,23 +33,23 @@ public class App {
                 Cli.cli();
                 break;
 
-            case Engine2.EVEN:
-                Even1.runnerEven();
+            case EVEN:
+                Even.runnerEven();
                 break;
 
-            case Engine2.CALC:
-                Calc1.runnerCalc();
+            case CALC:
+                Calc.runnerCalc();
                 break;
-            case Engine2.GCD:
-                GCD1.runnerGCD();
-                break;
-
-            case Engine2.MATHPROGRESSION:
-                MathProgression1.runnerMathProgression();
+            case GCD:
+                Gcd.runnerGCD();
                 break;
 
-            case Engine2.PRIME:
-                Prime1.runnerPrime();
+            case MATH_PROGRESSION:
+                MathProgression.runnerMathProgression();
+                break;
+
+            case PRIME:
+                Prime.runnerPrime();
                 break;
 
             case EXIT:

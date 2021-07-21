@@ -3,14 +3,9 @@ package hexlet.code;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Engine2 {
+public class Engine {
     public static final int RANGE_RANDOM = 100;
-    public static final int EVEN = 2;
-    public static final int CALC = 3;
-    public static final int GCD = 4;
-    public static final int MATHPROGRESSION = 5;
-    public static final int PRIME = 6;
-    public static final int NUMBER_OF_ATTEMPS = 3;
+    public static final int NUMBER_OF_ATTEMPTS = 3;
     private static String userName = null;
 
     public static int genRandom() {
