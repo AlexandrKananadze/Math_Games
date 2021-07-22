@@ -44,7 +44,8 @@ public class Calc {
             int y = Engine.genRandom();
             char operation = getRandomCharacter();
             String rightAnswer = String.valueOf((int) calculation(x, y, operation));
-            generatedTask.put(generationTask(x, y, operation), rightAnswer);
+            String taskGenerated = generationTask(x, y, operation);
+            generatedTask.put(taskGenerated, rightAnswer);
         }
         return generatedTask;
     }

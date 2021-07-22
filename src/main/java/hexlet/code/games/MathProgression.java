@@ -48,8 +48,8 @@ public class MathProgression {
             String[] progression = generateProgression();
             int indexHide = (int) (Math.random() * progression.length - 1);
             String valHide = progression[indexHide];
-            String generatedTask = generationsTask(hideMathProgression(progression, indexHide));
-            generatedTasks.put(generatedTask, (rightAnswerCount(valHide)));
+            String taskGenerated = generationsTask(hideMathProgression(progression, indexHide));
+            generatedTasks.put(taskGenerated, (rightAnswerCount(valHide)));
         }
         return generatedTasks;
     }

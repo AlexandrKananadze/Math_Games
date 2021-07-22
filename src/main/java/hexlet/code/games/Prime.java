@@ -26,8 +26,8 @@ public class Prime {
         Map<String, String> generatedTasks = new HashMap<>();
         for (int i = 0; i < Engine.NUMBER_OF_ATTEMPTS; i++) {
             int rand = Engine.genRandom();
-            String task = generationsTask(rand);
-            generatedTasks.put(task, isPrime(rand) ? "yes" : "no");
+            String taskGenerated = generationsTask(rand);
+            generatedTasks.put(taskGenerated, isPrime(rand) ? "yes" : "no");
         }
         return generatedTasks;
     }

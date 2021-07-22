@@ -18,8 +18,8 @@ public class Even {
         Map<String, String> generatedTasks = new HashMap<>();
         for (int i = 0; i < Engine.NUMBER_OF_ATTEMPTS; i++) {
             int rand = Engine.genRandom();
-            String task = generetionTask(rand);
-            generatedTasks.put(task, isEven(rand) ? "yes" : "no");
+            String taskGenereated = generetionTask(rand);
+            generatedTasks.put(taskGenereated, isEven(rand) ? "yes" : "no");
         }
         return generatedTasks;
     }
