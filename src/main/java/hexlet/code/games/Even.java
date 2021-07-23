@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Even {
 
-    private static final int rangeRandom = 100;
+    private static final int RANGE_RANDOM = 100;
 
     public static String generateQuestion(int rand) {
         return "Question: " + rand + "?";
@@ -20,7 +20,7 @@ public class Even {
     public static Map<String, String> generateTask() {
         Map<String, String> generatedTasks = new HashMap<>();
         for (int i = 0; i < Engine.NUMBER_OF_ATTEMPTS; i++) {
-            int rand = Engine.genRandom(rangeRandom);
+            int rand = Engine.genRandom(RANGE_RANDOM);
             String taskGenerate = generateQuestion(rand);
             generatedTasks.put(taskGenerate, isEven(rand) ? "yes" : "no");
         }

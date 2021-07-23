@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Prime {
 
-    private static final int rangeRandom = 100;
+    private static final int RANGE_RANDOM = 100;
 
     private static String generateQuestion(int rand) {
         return "Question: " + rand + "?";
@@ -26,7 +26,7 @@ public class Prime {
     public static Map<String, String> generateTask() {
         Map<String, String> generatedTasks = new HashMap<>();
         for (int i = 0; i < Engine.NUMBER_OF_ATTEMPTS; i++) {
-            int rand = Engine.genRandom(rangeRandom);
+            int rand = Engine.genRandom(RANGE_RANDOM);
             String taskGenerated = generateQuestion(rand);
             generatedTasks.put(taskGenerated, isPrime(rand) ? "yes" : "no");
         }

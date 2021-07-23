@@ -8,16 +8,15 @@ import java.util.Map;
 
 public class MathProgression {
 
-    private static final int progressionMaxSize = 10;
-    private static final int progressionMinSize = 5;
-    private static final int rangeRandom = 100;
+    private static final int PROGRESSION_MAX_SIZE = 10;
+    private static final int PROGRESSION_MIN_SIZE = 5;
+    private static final int RANGE_RANDOM = 100;
 
     public static String[] generateProgression() {
-        String[] progression = new String[(int) ((Math.random() *
-                progressionMaxSize)
-                + progressionMinSize)];
-        int d = Engine.genRandom(rangeRandom);
-        int firstNumber = Engine.genRandom(rangeRandom);
+        String[] progression = new String[(int) ((Math.random()
+                * PROGRESSION_MAX_SIZE) + PROGRESSION_MIN_SIZE)];
+        int d = Engine.genRandom(RANGE_RANDOM);
+        int firstNumber = Engine.genRandom(RANGE_RANDOM);
         for (int k = 0; k < progression.length; k++) {
             progression[k] = String.valueOf(firstNumber + k * d);
         }

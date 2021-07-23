@@ -9,7 +9,7 @@ public class Engine {
     public static final int NUMBER_OF_ATTEMPTS = 3;
 
     public static int genRandom(int rangeRandom) {
-        return  new Random().nextInt(rangeRandom) +1;
+        return  new Random().nextInt(rangeRandom) + 1;
     }
 
     public static String greeting() {

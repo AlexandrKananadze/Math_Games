@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Gcd {
 
-    private static final int rangeRandom = 100;
+    private static final int RANGE_RANDOM = 100;
 
     public static int countGcd(int first, int second) {
         if (second == 0) {
@@ -28,8 +28,8 @@ public class Gcd {
     public static Map<String, String> generateTask() {
         Map<String, String> generatedTasks = new HashMap<>();
         for (int i = 0; i < Engine.NUMBER_OF_ATTEMPTS; i++) {
-            int a = Engine.genRandom(rangeRandom);
-            int b = Engine.genRandom(rangeRandom);
+            int a = Engine.genRandom(RANGE_RANDOM);
+            int b = Engine.genRandom(RANGE_RANDOM);
             generatedTasks.put(generateQuestion(a, b), (rightAnswerCount(a, b)));
         }
         return generatedTasks;
