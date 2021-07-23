@@ -8,10 +8,12 @@ import java.util.Map;
 import java.util.Random;
 
 public class Calc {
-    private static final char[] OPERATION = {'*', '-', '+'};
 
-    public static double calculation(int x, int y, char operation) {
-        double result = 0;
+    private static final char[] OPERATION = {'*', '-', '+'};
+    private static final int rangeRandom = 100;
+
+    public static int calculation(int x, int y, char operation) {
+        int result;
         switch (operation) {
             case '+':
                 result = x + y;
@@ -23,35 +25,35 @@ public class Calc {
                 result = x * y;
                 break;
             default:
-                break;
+                throw new RuntimeException();
         }
         return result;
     }
 
-    public static char getRandomCharacter() {
+    public static char getRandomOperation() {
         Random rnd = new Random();
         return OPERATION[(rnd.nextInt(OPERATION.length))];
     }
 
-    public static String generationTask(int x, int y, char operation) {
+    public static String generateQuestion(int x, int y, char operation) {
         return "Question: " + x + " " + operation + " " + y;
     }
 
-    public static Map<String, String> questionsToAnswersCalc() {
+    public static Map<String, String> generateTask() {
         Map<String, String> generatedTask = new HashMap<>();
         for (int i = 0; i < Engine.NUMBER_OF_ATTEMPTS; i++) {
-            int x = Engine.genRandom();
-            int y = Engine.genRandom();
-            char operation = getRandomCharacter();
-            String rightAnswer = String.valueOf((int) calculation(x, y, operation));
-            String taskGenerated = generationTask(x, y, operation);
+            int x = Engine.genRandom(rangeRandom);
+            int y = Engine.genRandom(rangeRandom);
+            char operation = getRandomOperation();
+            String rightAnswer = String.valueOf(calculation(x, y, operation));
+            String taskGenerated = generateQuestion(x, y, operation);
             generatedTask.put(taskGenerated, rightAnswer);
         }
         return generatedTask;
     }
 
-    public static void runnerCalc() {
+    public static void runCalc() {
         String task = "What is the result of the expression?";
-        Engine.execute(task, questionsToAnswersCalc());
+        Engine.execute(task, generateTask());
     }
 }

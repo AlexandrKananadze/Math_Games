@@ -10,12 +10,11 @@ import java.util.Scanner;
 public class App {
     private static final int GREETING = 1;
     private static final int EXIT = 0;
-    public static final int EVEN = 2;
-    public static final int CALC = 3;
-    public static final int GCD = 4;
-    public static final int MATH_PROGRESSION = 5;
-    public static final int PRIME = 6;
-
+    private static final int EVEN = 2;
+    private static final int CALC = 3;
+    private static final int GCD = 4;
+    private static final int MATH_PROGRESSION = 5;
+    private static final int PRIME = 6;
 
     public static void main(String[] args) {
 
@@ -37,22 +36,22 @@ public class App {
                 break;
 
             case EVEN:
-                Even.runnerEven();
+                Even.runEven();
                 break;
 
             case CALC:
-                Calc.runnerCalc();
+                Calc.runCalc();
                 break;
             case GCD:
-                Gcd.runnerGCD();
+                Gcd.runGCD();
                 break;
 
             case MATH_PROGRESSION:
-                MathProgression.runnerMathProgression();
+                MathProgression.runMathProgression();
                 break;
 
             case PRIME:
-                Prime.runnerPrime();
+                Prime.runPrime();
                 break;
 
             case EXIT:

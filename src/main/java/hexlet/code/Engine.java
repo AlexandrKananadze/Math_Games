@@ -1,14 +1,15 @@
 package hexlet.code;
 
 import java.util.Map;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int RANGE_RANDOM = 100;
+  //  public static final int RANGE_RANDOM = 100;
     public static final int NUMBER_OF_ATTEMPTS = 3;
 
-    public static int genRandom() {
-        return (int) (Math.random() * RANGE_RANDOM + 1);
+    public static int genRandom(int rangeRandom) {
+        return  new Random().nextInt(rangeRandom) +1;
     }
 
     public static String greeting() {
