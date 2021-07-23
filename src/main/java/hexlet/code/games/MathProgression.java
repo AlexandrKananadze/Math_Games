@@ -1,16 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class MathProgression {
 
-    private static final int PROGRESSION_MAX_SIZE = 10;
+    private static final int PROGRESSION_MAX_SIZE = 7;
     private static final int PROGRESSION_MIN_SIZE = 5;
-    private static final int RANGE_RANDOM = 100;
+    private static final int RANGE_RANDOM = 10;
 
     public static String[] generateProgression() {
         String[] progression = new String[(int) ((Math.random()
@@ -34,7 +33,7 @@ public class MathProgression {
             String[] progression = generateProgression();
             int indexHide = (int) (Math.random() * progression.length - 1);
             String valHide = progression[indexHide];
-            progression[indexHide] = ".. ";
+            progression[indexHide] = "..";
             generatedTasks.put(generateQuestion(progression), valHide);
         }
         return generatedTasks;
