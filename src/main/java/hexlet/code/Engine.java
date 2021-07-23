@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-  //  public static final int RANGE_RANDOM = 100;
+
     public static final int NUMBER_OF_ATTEMPTS = 3;
 
     public static int genRandom(int rangeRandom) {
