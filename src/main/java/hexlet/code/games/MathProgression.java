@@ -24,7 +24,7 @@ public class MathProgression {
     }
 
     public static String generateQuestion(String[] progression) {
-        String task = String.join(", ", progression);
+        String task = String.join(" ", progression);
         return "Question: " + task + "?";
     }
 
