@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
+
 
 public class Calc {
 
@@ -31,8 +31,7 @@ public class Calc {
     }
 
     public static char getRandomOperation() {
-        Random rnd = new Random();
-        return OPERATION[(rnd.nextInt(OPERATION.length))];
+        return OPERATION[Engine.genRandom(OPERATION.length) - 1];
     }
 
     public static String generateQuestion(int x, int y, char operation) {

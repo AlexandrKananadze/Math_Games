@@ -7,17 +7,17 @@ import java.util.Map;
 
 public class MathProgression {
 
-    private static final int PROGRESSION_MAX_SIZE = 7;
     private static final int PROGRESSION_MIN_SIZE = 5;
+    private static final int PROGRESSION_ADDED_SIZE = 5;
     private static final int RANGE_RANDOM = 10;
 
     public static String[] generateProgression() {
-        String[] progression = new String[(int) ((Math.random()
-                * PROGRESSION_MAX_SIZE) + PROGRESSION_MIN_SIZE)];
-        int d = Engine.genRandom(RANGE_RANDOM);
+        String[] progression = new String[Engine.genRandom(PROGRESSION_MIN_SIZE)
+                + PROGRESSION_ADDED_SIZE];
         int firstNumber = Engine.genRandom(RANGE_RANDOM);
-        for (int k = 0; k < progression.length; k++) {
-            progression[k] = String.valueOf(firstNumber + k * d);
+        int progressionStep = Engine.genRandom(RANGE_RANDOM);
+        for (int i = 0; i < progression.length; i++) {
+            progression[i] = String.valueOf(firstNumber + i * progressionStep);
         }
         return progression;
     }
@@ -43,4 +43,5 @@ public class MathProgression {
         String task = "What number is missing in the PROGRESSION?";
         Engine.execute(task, generateTask());
     }
+
 }
